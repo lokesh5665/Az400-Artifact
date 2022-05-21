@@ -1,0 +1,11 @@
+name: 1.0$(Rev:.r)
+trigger:
+- master
+variables:
+  name: makarand
+pool:
+  vmImage: ubuntu-latest
+jobs:
+  - job: helloworld
+    steps:
+      - script: echo "Hello, $(name)"

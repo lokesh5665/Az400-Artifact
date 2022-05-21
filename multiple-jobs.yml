@@ -1,0 +1,20 @@
+name: 1.0$(Rev:.r)
+trigger:
+  branches:
+    include:
+    - master
+    exclude:
+    - dev
+
+variables:
+  name: makarand
+pool:
+  vmImage: ubuntu-latest
+jobs:
+  - job: A
+    steps:
+      - script: echo "Job A"
+  - job: B
+    dependsOn: A
+    steps:
+      - script: echo "Job B"
