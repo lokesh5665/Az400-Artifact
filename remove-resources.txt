@@ -1,0 +1,2 @@
+Remove-AzResourceGroup -Name 'arm-using-ps' -Force -AsJob
+az group remove -n 'arm-using-cli'

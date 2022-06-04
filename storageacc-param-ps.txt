@@ -1,0 +1,3 @@
+New-AzResourceGroup -Name arm-using-ps -Location eastus -Force
+
+New-AzResourceGroupDeployment -ResourceGroupName arm-using-ps -TemplateFile 'storageacc-param.json' -StorageName 'storageacc0306222'

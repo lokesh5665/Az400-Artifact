@@ -1,0 +1,4 @@
+
+az group create -n arm-using-cli -l eastus
+
+az deployment group create -g arm-using-cli --template-file 'storageacc.json'
